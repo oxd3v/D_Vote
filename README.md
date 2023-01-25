@@ -19,10 +19,10 @@ unique cryptographic Id
 Running D_Vote DApp
 --------------------------------
 1. to deploy run
-yarn hardhat run scripts/deploy.js --network<network name>
+`` yarn hardhat run scripts/deploy.js --network<network name>```
 
 2. to test run
-yarn hardhat test
+``yarn hardhat test```
 
 3. set contract info in ContractInformation.js file (set your abi, contractAddress)
 
