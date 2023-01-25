@@ -1,0 +1,783 @@
+{
+  "manifestVersion": "3.2",
+  "admin": {
+    "address": "0x9141FF6Fbb0dA759C02907189dD42AADb80eA21D",
+    "txHash": "0x66e4fc5a8e2aef031dc8ef3792b0f33c408696727167cbc75dd4b27adc5bbac1"
+  },
+  "proxies": [
+    {
+      "address": "0x6D714e61E0d92beF593876ECa1dF695Cfedf6437",
+      "txHash": "0x9694d91dfdd5104c3e4d37ba10ed336555b715ea46089fd06fdb103f578a30d7",
+      "kind": "transparent"
+    },
+    {
+      "address": "0x3e21a7269c4A7651F4AD7cdeB3f6Df711a21b7c5",
+      "txHash": "0x14fdcea6700365c8e00119515ff814dad3e43c81b7ad7f43e8f52c25bd7e7733",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xcf3d415415cA88542756e7aed65088b32F5aeE0e",
+      "txHash": "0x22a26a160140664d731f834f6639fd84a5a7b1d2f8c3853de4270b136a917bb9",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xcB39e54C8481458fAD4E1c13837bCe77A2011C01",
+      "txHash": "0x4c4969a5dce63a59677a64eba7b5d68a90d8fecb393c1778c0ee0763d6124f29",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "f7566a6b5b447c63a303f9f7e6b4c1b701dafb0c8766d2398518a20e085e085a": {
+      "address": "0x852AD126690154DE623E04bE58d8CC09fb3C597F",
+      "txHash": "0x54519b5ec96f1c9a174f7a3cbf561dec69fb8e6a13af0c172e87e4910a2c73ae",
+      "layout": {
+        "solcVersion": "0.8.17",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "state",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_enum(Status)559",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:39"
+          },
+          {
+            "label": "hasVoted",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_struct(voter)576_storage)",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:59"
+          },
+          {
+            "label": "candidates",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_bytes32,t_struct(candidate)569_storage)",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:60"
+          },
+          {
+            "label": "validCandidates",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_array(t_bytes32)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:66"
+          },
+          {
+            "label": "voted",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_array(t_address)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:67"
+          },
+          {
+            "label": "votingPeriod",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:73"
+          },
+          {
+            "label": "lastTimeStamp",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_uint256",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:74"
+          },
+          {
+            "label": "winners",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_array(t_bytes32)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:77"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_enum(Status)559": {
+            "label": "enum Decentralized_Vote.Status",
+            "members": [
+              "Enacting",
+              "publicVoting"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_struct(voter)576_storage)": {
+            "label": "mapping(address => struct Decentralized_Vote.voter)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(candidate)569_storage)": {
+            "label": "mapping(bytes32 => struct Decentralized_Vote.candidate)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(candidate)569_storage": {
+            "label": "struct Decentralized_Vote.candidate",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "castedVote",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(voter)576_storage": {
+            "label": "struct Decentralized_Vote.voter",
+            "members": [
+              {
+                "label": "isVoter",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "hasVote",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "0"
+              },
+              {
+                "label": "validation",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "a0977471c4c00408d3ba7f9397a34f0a7daeabc3f8c751d204aa6e727552c54c": {
+      "address": "0x2aCef5E15a496b4F6247f3EF489D663fEeD65b04",
+      "txHash": "0x7f6ccc6d824ab27eea18f213620a2150a4e91637fea09e35892a807fbd065e55",
+      "layout": {
+        "solcVersion": "0.8.17",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "state",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_enum(Status)561",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:40"
+          },
+          {
+            "label": "hasVoted",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_struct(voter)578_storage)",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:60"
+          },
+          {
+            "label": "candidates",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_bytes32,t_struct(candidate)571_storage)",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:61"
+          },
+          {
+            "label": "validCandidates",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_array(t_bytes32)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:67"
+          },
+          {
+            "label": "voted",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_array(t_address)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:68"
+          },
+          {
+            "label": "votingPeriod",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:74"
+          },
+          {
+            "label": "lastTimeStamp",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_uint256",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:75"
+          },
+          {
+            "label": "winners",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_array(t_bytes32)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:78"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_enum(Status)561": {
+            "label": "enum Decentralized_Vote.Status",
+            "members": [
+              "Enacting",
+              "publicVoting"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_struct(voter)578_storage)": {
+            "label": "mapping(address => struct Decentralized_Vote.voter)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(candidate)571_storage)": {
+            "label": "mapping(bytes32 => struct Decentralized_Vote.candidate)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(candidate)571_storage": {
+            "label": "struct Decentralized_Vote.candidate",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "castedVote",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(voter)578_storage": {
+            "label": "struct Decentralized_Vote.voter",
+            "members": [
+              {
+                "label": "isVoter",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "hasVote",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "0"
+              },
+              {
+                "label": "validation",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "892ff45dcd80337b632312b6fb586d023a5ee9708af28cdd45c984ef0fd3166d": {
+      "address": "0x2b950EbeE7d6cbBE5B29eA81e099915CA17366F7",
+      "txHash": "0xe49ce6e204ddbb5cbbfa60c3da73101cef0a570557d36695d5ede514d24fc1a1",
+      "layout": {
+        "solcVersion": "0.8.17",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "state",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_enum(Status)561",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:40"
+          },
+          {
+            "label": "hasVoted",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_struct(voter)578_storage)",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:60"
+          },
+          {
+            "label": "candidates",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_bytes32,t_struct(candidate)571_storage)",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:61"
+          },
+          {
+            "label": "validCandidates",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_array(t_bytes32)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:67"
+          },
+          {
+            "label": "voted",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_array(t_address)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:68"
+          },
+          {
+            "label": "votingPeriod",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:74"
+          },
+          {
+            "label": "lastTimeStamp",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_uint256",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:75"
+          },
+          {
+            "label": "winners",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_array(t_bytes32)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:78"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_enum(Status)561": {
+            "label": "enum Decentralized_Vote.Status",
+            "members": [
+              "Enacting",
+              "publicVoting"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_struct(voter)578_storage)": {
+            "label": "mapping(address => struct Decentralized_Vote.voter)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(candidate)571_storage)": {
+            "label": "mapping(bytes32 => struct Decentralized_Vote.candidate)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(candidate)571_storage": {
+            "label": "struct Decentralized_Vote.candidate",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "castedVote",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(voter)578_storage": {
+            "label": "struct Decentralized_Vote.voter",
+            "members": [
+              {
+                "label": "isVoter",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "hasVote",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "0"
+              },
+              {
+                "label": "validation",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    },
+    "788b8a5c1809579b0710588251bcd0c786d522f1d63875c8e045896cd632065e": {
+      "address": "0x2aB286105c3CD2f57B2b38F2Db4680b9fEc5F817",
+      "txHash": "0x4586a887b7695bd5bd2a56f23b87a9bf8c60915e2ccf71625942e551f06ce47d",
+      "layout": {
+        "solcVersion": "0.8.17",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:62",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:67"
+          },
+          {
+            "label": "state",
+            "offset": 2,
+            "slot": "0",
+            "type": "t_enum(Status)561",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:40"
+          },
+          {
+            "label": "hasVoted",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_mapping(t_address,t_struct(voter)578_storage)",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:60"
+          },
+          {
+            "label": "candidates",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_mapping(t_bytes32,t_struct(candidate)571_storage)",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:61"
+          },
+          {
+            "label": "validCandidates",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_array(t_bytes32)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:67"
+          },
+          {
+            "label": "voted",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_array(t_address)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:68"
+          },
+          {
+            "label": "votingPeriod",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:74"
+          },
+          {
+            "label": "lastTimeStamp",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_uint256",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:75"
+          },
+          {
+            "label": "winners",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_array(t_bytes32)dyn_storage",
+            "contract": "Decentralized_Vote",
+            "src": "contracts\\DecentralizedVote.sol:78"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_address)dyn_storage": {
+            "label": "address[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_bytes32)dyn_storage": {
+            "label": "bytes32[]",
+            "numberOfBytes": "32"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_enum(Status)561": {
+            "label": "enum Decentralized_Vote.Status",
+            "members": [
+              "Enacting",
+              "publicVoting"
+            ],
+            "numberOfBytes": "1"
+          },
+          "t_mapping(t_address,t_struct(voter)578_storage)": {
+            "label": "mapping(address => struct Decentralized_Vote.voter)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(candidate)571_storage)": {
+            "label": "mapping(bytes32 => struct Decentralized_Vote.candidate)",
+            "numberOfBytes": "32"
+          },
+          "t_string_storage": {
+            "label": "string",
+            "numberOfBytes": "32"
+          },
+          "t_struct(candidate)571_storage": {
+            "label": "struct Decentralized_Vote.candidate",
+            "members": [
+              {
+                "label": "id",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "name",
+                "type": "t_string_storage",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "castedVote",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              }
+            ],
+            "numberOfBytes": "96"
+          },
+          "t_struct(voter)578_storage": {
+            "label": "struct Decentralized_Vote.voter",
+            "members": [
+              {
+                "label": "isVoter",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "hasVote",
+                "type": "t_bool",
+                "offset": 1,
+                "slot": "0"
+              },
+              {
+                "label": "validation",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        }
+      }
+    }
+  }
+}
