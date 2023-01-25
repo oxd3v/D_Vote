@@ -1,4 +1,5 @@
 DECENTRALISED UPGRADEABLE AUTOMATED E-VOTING DAPP FOR PRIVATE ENTERPRISE
+---------------------------------------------------------------------
 
 Now a days in the decentralize era To ensure transparancy  voting mechanism , automated calculation and equal voting right for every voter decentralization in voting platform is necessary and unreplacable solution.
 
